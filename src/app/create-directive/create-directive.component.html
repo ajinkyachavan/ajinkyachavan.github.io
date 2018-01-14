@@ -1,7 +1,0 @@
-<div *ngIf="loadPara; else myPara">
-  <p highlightme defColor='blue'> Whazzaaa </p>
-</div>
-
-<ng-template #myPara>
-    <p *ngFor="let color of colors" highlightme [defColor]="color" > Whazzaaa </p>
-</ng-template>
