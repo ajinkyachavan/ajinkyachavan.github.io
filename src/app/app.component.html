@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Collapsible sidebar using Bootstrap 3</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous"> -->
+  <!-- Our Custom CSS -->
+</head>
+
+<body>
+  <!-- <nav class="navbar navbar-default">
+    <div class="container"> 
+      <div class="navbar-header" (click)="sideBarToggle()">
+        <button type="button" id="sidebarCollapse" class="navbar-btn" >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div> 
+     </div>
+  </nav> -->
+
+
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>Ajinkya Chavan</h3>
+        <hr>
+        <h4><strong>Projects</strong></h4>
+      </div>
+      <hr style="border-top: dotted 1px;" />
+      <ul class="list-unstyled components">
+        <li>
+          <a (click)="toggleApp($event)">Recipe</a>
+        </li>
+        <hr>
+        <li>
+          <a (click)="toggleApp($event)">Weather</a>
+        </li>
+        <hr>
+        <li>
+          <a (click)="toggleApp($event)">Seven Wonders</a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+
+
+
+        <ul [ngSwitch]="toggleMyApp">
+          <li style="list-style: none;"  *ngSwitchCase="'Recipe'"><app-recipe-app></app-recipe-app></li>
+          <li style="list-style: none;"  *ngSwitchCase="'Weather'"><app-weather-app></app-weather-app></li>
+          <li style="list-style: none;"  *ngSwitchCase="'Seven Wonders'"><app-seven-wonders></app-seven-wonders></li>
+        </ul>
+
+
+        <!-- <div *ngIf="toggleMyApp; else noise">
+          <app-create-directive></app-create-directive>
+        </div>
+
+        <ng-template #noise>
+          <app-weather-app></app-weather-app>
+        </ng-template> -->
+      
+    </div>
+  </div>
+
+
+
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script> -->
+
+
+</body>
+
+</html>
